@@ -22,8 +22,6 @@ const iterate = (root) => {
       children = children.length === 0 ? ['div'] : children;
     }
 
-    console.log(componentName, tempName, root[componentName]);
-
     const template = ejs.compile(temp);
     const str = template({
       componentName,
