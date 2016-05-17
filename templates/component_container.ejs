@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import connectForm from '../../../../../lib/form/connectForm';
-import {actions} from '../../../../../redux/modules/campaignMicroservice/campaignForm/campaignData';<% children.forEach(function (child) { if (child === 'div') {return} %>
+import connectForm from '<%=prototype.pathToRoot%>/lib/form/connectForm';
+import {actions} from '<%=prototype.pathToRoot%>/redux/modules/campaignMicroservice/campaignForm/campaignData';<% children.forEach(function (child) { if (child === 'div') {return} %>
 import <%=child%> from './<%=child%>';
 <% });%>
 

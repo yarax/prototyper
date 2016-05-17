@@ -6,7 +6,7 @@ const prototype = jsyaml.load(fs.readFileSync(`${__dirname}/prototype.yaml`));
 
 const keys = (obj) => obj ? Object.keys(obj) : null;
 
-const targetDir = `${__dirname}/results/${keys(prototype)[0]}`;
+const targetDir = `${__dirname}/results/${keys(prototype.Components)[0]}`;
 fs.mkdirSync(targetDir);
 
 const iterate = (root) => {
@@ -26,7 +26,8 @@ const iterate = (root) => {
     const str = template({
       componentName,
       children,
-      component: root[componentName]
+      component: root[componentName],
+      prototype
     });
     fs.writeFileSync(`${targetDir}/${componentName}.js`, str);
     if (root[componentName]) {
@@ -36,4 +37,4 @@ const iterate = (root) => {
 }
 
 
-iterate(prototype);
+iterate(prototype.Components);

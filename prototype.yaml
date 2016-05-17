@@ -1,9 +1,11 @@
-CampaignFormLandingContainer:
-  connectForm: true
-  CampaignFormLanding:
-    CampaignFormLandingFilterContainer:
-      CampaignFormLandingFilter:
-      CampaignFormLandingTabsContainer:
-        CampaignFormLandingTabs:
-          CampaignFormLandingContentContainer:
-            connectForm: true
+pathToRoot: '../../../..'
+Components:
+  CampaignFormLandingContainer:
+    connectForm: true
+    CampaignFormLanding:
+      CampaignFormLandingFilterContainer:
+        CampaignFormLandingFilter:
+        CampaignFormLandingTabsContainer:
+          CampaignFormLandingTabs:
+            CampaignFormLandingContentContainer:
+              connectForm: true
