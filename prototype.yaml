@@ -1,3 +1,5 @@
+CampaignFormLandingContainer:
+  connectForm: true
   CampaignFormLanding:
     CampaignFormLandingFilterContainer:
       CampaignFormLandingFilter:

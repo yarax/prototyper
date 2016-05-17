@@ -9,11 +9,10 @@ const keys = (obj) => obj ? Object.keys(obj) : null;
 const targetDir = `${__dirname}/results/${keys(prototype)[0]}`;
 fs.mkdirSync(targetDir);
 
-var i=0;
 const iterate = (root) => {
   keys(root).forEach((componentName) => {
     if (typeof root[componentName] !== 'object') return;
-    const tempName = componentName.match(/container$/) ? 'component_container' : 'component';
+    const tempName = componentName.match(/Container$/) ? 'component_container' : 'component';
     const temp = fs.readFileSync(`${__dirname}/templates/${tempName}.ejs`).toString();
     var children;
     if (!root[componentName]) {
@@ -22,6 +21,8 @@ const iterate = (root) => {
       children = keys(root[componentName]).filter(childKey => typeof root[componentName][childKey] === 'object');
       children = children.length === 0 ? ['div'] : children;
     }
+
+    console.log(componentName, tempName, root[componentName]);
 
     const template = ejs.compile(temp);
     const str = template({
