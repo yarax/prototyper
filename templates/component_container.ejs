@@ -1,0 +1,34 @@
+import React from 'react';
+import {connect} from 'react-redux';
+import connectForm from '../../../../../lib/form/connectForm';
+import {actions} from '../../../../../redux/modules/campaignMicroservice/campaignForm/campaignData';<% children.forEach(function (child) { if (child === 'div') {return} %>
+import <%=child%> from './<%=child%>';
+<% });%>
+
+class <%=componentName%> extends React.Component {
+  render() {
+    return (
+<% if (children.length > 1) { %>
+<div>
+<%}%><% children.forEach(function (child) { %>
+      <<%=child%>/>
+    <% });%><% if (children.length > 1) { %>
+</div>
+<%}%>
+    );
+  }
+}
+
+<% if (component.connectForm) {%>
+const <%=componentName%>Form = connectForm({
+  formStatePath: 'campaignMicroservice.campaignForm.campaignData.form',
+  defaults: {},
+  actions,
+})(<%=componentName%>)
+<%}%>
+
+export default connect(state => {
+  return {
+
+  };
+}, {})(<%=component.connectForm ? componentName + 'Form' : componentName %>);

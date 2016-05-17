@@ -1,0 +1,18 @@
+import React from 'react';
+import {connect} from 'react-redux';<% children.forEach(function (child) { if (child === 'div') {return} %>
+import <%=child%> from './<%=child%>';
+<% });%>
+
+function <%=componentName%>({prop}) {
+  return (
+<% if (children.length > 1) { %>
+    <div>
+<%}%><% children.forEach(function (child) { %>
+    <<%=child%>/>
+    <% });%><% if (children.length > 1) { %>
+    </div>
+<%}%>
+  );
+}
+
+export default <%=componentName%>;
