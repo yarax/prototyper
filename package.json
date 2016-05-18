@@ -1,7 +1,7 @@
 {
   "name": "prototyper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fast prototyping for React/Redux components",
   "main": "index.js",
   "scripts": {
     "start": "rm -rf ./results/* && node index.js",

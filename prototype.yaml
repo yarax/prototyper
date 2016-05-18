@@ -5,7 +5,7 @@ Components:
     CampaignFormLanding:
       CampaignFormLandingFilterContainer:
         CampaignFormLandingFilter:
-        CampaignFormLandingTabsContainer:
-          CampaignFormLandingTabs:
-            CampaignFormLandingContentContainer:
-              connectForm: true
+      CampaignFormLandingTabsContainer:
+        CampaignFormLandingTabs:
+          CampaignFormLandingContentContainer:
+            connectForm: true
